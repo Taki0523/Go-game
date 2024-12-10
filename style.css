@@ -1,3 +1,9 @@
+/* 更改字體 */
+@font-face {
+    font-family: myFont; /* 看要設什麼名稱:myFont */
+    src: url(./JasonHandwriting1.ttf); /* 字體檔案位置 */
+}
+
 * {
     /* 清除大部分css預設值的樣式 */
     padding: 0; 
@@ -9,7 +15,7 @@
         怎麼調整內邊距和邊框，這個元素的總寬高都不會改變。
     */
     box-sizing: border-box;
-    font-family: DFkai-sb, sans-serif;
+    font-family: "myFont", DFkai-sb, sans-serif;
 }
 
 h1,
@@ -18,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-    /* 控制粗細 */
+    /* 控制字體粗細 */
     font-weight: normal;
 }
 
@@ -208,4 +214,13 @@ section.taiwan h3 {
 
 section.taiwan ul {
     padding: 1rem;
+}
+
+
+/* 當max-width: 600px，自動換行 */
+
+@media screen and (max-width: 600px){
+    header nav ul {
+        flex-direction: column;
+    }
 }
